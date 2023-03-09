@@ -1,3 +1,48 @@
+#about-us {
+    margin-top: 200px; 
+    margin-left: 100px ;
+}
+
+.container-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.s-about-us{
+    width: 260px;
+    height: 233px;
+    margin: 0px 20px 20px 20px;
+    --bs-border-radius: 15px;
+}
+
+.card-text {
+    font-weight: normal;
+}
+
+.card-title {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#image-container {
+    position: relative;
+}
+
+#solana {
+    width: 10%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 60px;
+    margin: 10px;
+}
+
+.s-stats {
+    width: 400px;
+    border-color: #1F1F1F;
+}
+
 *{
     margin: 0;
     padding: 0;
