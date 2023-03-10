@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,8 +12,6 @@
     <title>Magic Eden</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -20,7 +19,7 @@
 <header>
     <nav>
         <img src="./img/aLVARO.png" alt="" width="15%">
-        <input type="search" class="inputSearch" placeholder="tan mk">
+        <input type="search" class="inputSearch" placeholder="Search collections and creators">
         <ul>
             <!---Cada # se le tiene que asignar a la sección-->
             <li><a href="#launchpad">Launchpad</a></li>
@@ -30,17 +29,88 @@
         </ul>
         <a href="https://www.instagram.com/conblast/" class="btn">Connect Wallet</a>
     </nav>
-    </header>
+</header>
 
 <body>
-    
 
-    <script src="sketch.js"></script>
+
+    <section id="about-us">
+        <h2>About Us</h2>
+        <div class="container-cards">
+            <div class="card s-about-us">
+                <div class="card-body">
+                    <i class="fas fa-circle-info"></i>
+                    <br>
+                    <h5 class="card-title">¿What is it?</h5>
+                    <p class="card-text">Magic Eden is a decentralized NFT marketplace built
+                        on the Solana blockchain. We can process over 65,000 transactions per
+                        second and have a block time of one second.</p>
+                </div>
+            </div>
+
+            <div class="card s-about-us">
+                <div class="card-body">
+                    <i class="fas fa-rocket"></i>
+                    <h5 class="card-title">Launchpad function</h5>
+                    <p class="card-text">Magic Eden's minting platform, which is also used as a
+                        research program, makes the creation and distribution of NFT an easy process
+                        and requires little or no technical knowledge.</p>
+                </div>
+            </div>
+            <div class="card s-about-us">
+                <div class="card-body">
+                    <i class="fa-solid fa-plane-departure"></i>
+                    <h5 class="card-title">Upcoming launches</h5>
+                    <p class="card-text">Magic Eden tracks and vets the projects it features on the
+                        platform, also highlighting some of the most important upcoming launches. This
+                        can help investors save a lot of research work.</p>
+                </div>
+            </div>
+            <div class="card s-about-us">
+                <div class="card-body">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h5 class="card-title">Stats</h5>
+                    <p class="card-text">When buying an NFT, there are elements that help to give it
+                        value over time, "Stats" shows some indicators of which NFTs are popular now
+                        and which will continue to be popular.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats">
+        <h2>Stats</h2>
+        <div class="card s-stats">
+            <div id="image-container">
+                <img src="https://img-cdn.magiceden.dev/rs:fill:400:400:0:0/plain/https://bafkreicndlrqersl63a7fpk6zzw73lsklj5bwsidk74n4solbcyz2g3viq.ipfs.nftstorage.link/"
+                    class="card-img-top" alt="...">
+                <img id="solana"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5m9a4IEGuSR8eRW7xnSTUW6FOYxtelbHqIw&usqp=CAU"
+                    alt="">
+
+            </div>
+            <hr class="card-stats">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Badged Collection</h6>
+                <h5 class="card-title">DeGods</h5>
+            </div>
+        </div>
+
+    </section>
+
+
     <footer class="footer">
         <div class="container-footer">
             <div class="row-footer">
                 <div class="footer-col">
-                    <img src="./img/white-logo.png" alt="Magic-eden-white-logo" class="img-fluid">
+                    <h4>Magic eden</h4>
+                    <ul>
+                        <li>
+                            <figure><img
+                                    src="https://magiceden.io/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.fad4cb4c.png&w=640&q=75"
+                                    alt=""></figure>
+                        </li>
+                    </ul>
                 </div>
                 <div class="footer-col">
                     <h4>About us</h4>
@@ -70,5 +140,7 @@
             </div>
         </div>
     </footer>
+    <script src="sketch.js"></script>
 </body>
+
 </html>
