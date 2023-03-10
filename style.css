@@ -1,32 +1,65 @@
-#about-us {
-    margin-top: 200px; 
-    margin-left: 100px ;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
 
-.container-cards{
+main {
+    height: 2184px;
+}
+
+/* Section About Us */
+#about-us {
+    margin-top: 200px;
+    margin-left: 70px;
+}
+
+.container-cards {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.s-about-us{
+.s-about-us {
     width: 260px;
-    height: 233px;
-    margin: 0px 20px 20px 20px;
+    margin: 0px 40px 20px 0px;
     --bs-border-radius: 15px;
-}
-
-.card-text {
-    font-weight: normal;
 }
 
 .card-title {
     margin-top: 10px;
     font-weight: bold;
 }
+.card-text {
+    font-weight: normal;
+}
+
+/* Section Stats */
+#stats {
+    margin: 0px 70px;
+}
+
+#stats-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.s-stats {
+    margin: 0px !important;
+    width: 400px;
+    --bs-border-color-translucent: #1F1F1F;
+    --bs-border-width: 2pt;
+    justify-content: center;
+    --bs-card-group-margin: 0px !important;
+}
 
 #image-container {
     position: relative;
+    margin: 0px;
 }
 
 #solana {
@@ -38,17 +71,56 @@
     margin: 10px;
 }
 
-.s-stats {
-    width: 400px;
-    border-color: #1F1F1F;
+.card-stats {
+    color: #1F1F1F;
+    opacity: 100;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Be Vietnam Pro', sans-serif;
+.stats-text-container {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    margin: 0px;
+    background-color: #606060;
+    border-radius: 0px 15px 15px 0px;
+    float: right;
 }
+
+.container-text {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.big-numbers {
+    color:rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.specific-stats-text {
+    width: 480px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A8A8A8;
+    border-radius: 8px;
+}
+
+.text-numbers {
+    margin: 10px;
+}
+
+p {
+    margin: 0px !important;
+}
+
+/* footer */
 .container-footer{
     max-width: 1170px;
     margin: auto;
@@ -134,6 +206,8 @@ transition: all 0.5 ease-in-out;
         margin-bottom: 30px;
     }
 }
+
+/* Header */
 
 header{
     background-color: black;

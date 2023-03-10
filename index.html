@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-VS5z5ueAVhA9V7OV/YfrfF/La/DIDSWBywi1uV7Jm28nLfQV7sqnLlXuTtyTnbdK/MTwcnM+2gCeQf7xvE8AhA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha512-0aLuTzTgR1wY2HklJxvWo0K1O/pk88p7X9lq/6MTE+rW8GutprwxxjB3q+W6kFTCg8yR/NbRQ9BUeSNPKsjJ4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Magic Eden</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
 <!---Header-->
@@ -32,71 +32,109 @@
 </header>
 
 <body>
+    <main>
+        <section id="about-us">
+            <h2>About Us</h2>
+            <div class="container-cards">
+                <div class="card s-about-us">
+                    <div class="card-body">
+                        <i class="fas fa-circle-info"></i>
+                        <br>
+                        <h5 class="card-title">¿What is it?</h5>
+                        <p class="card-text">Magic Eden is a decentralized NFT marketplace built
+                            on the Solana blockchain. We can process over 65,000 transactions per
+                            second and have a block time of one second.</p>
+                    </div>
+                </div>
 
-
-    <section id="about-us">
-        <h2>About Us</h2>
-        <div class="container-cards">
-            <div class="card s-about-us">
-                <div class="card-body">
-                    <i class="fas fa-circle-info"></i>
-                    <br>
-                    <h5 class="card-title">¿What is it?</h5>
-                    <p class="card-text">Magic Eden is a decentralized NFT marketplace built
-                        on the Solana blockchain. We can process over 65,000 transactions per
-                        second and have a block time of one second.</p>
+                <div class="card s-about-us">
+                    <div class="card-body">
+                        <i class="fas fa-rocket"></i>
+                        <h5 class="card-title">Launchpad function</h5>
+                        <p class="card-text">Magic Eden's minting platform, which is also used as a
+                            research program, makes the creation and distribution of NFT an easy process
+                            and requires little or no technical knowledge.</p>
+                    </div>
+                </div>
+                <div class="card s-about-us">
+                    <div class="card-body">
+                        <i class="fa-solid fa-plane-departure"></i>
+                        <h5 class="card-title">Upcoming launches</h5>
+                        <p class="card-text">Magic Eden tracks and vets the projects it features on the
+                            platform, also highlighting some of the most important upcoming launches. This
+                            can help investors save a lot of research work.</p>
+                    </div>
+                </div>
+                <div class="card s-about-us">
+                    <div class="card-body">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <h5 class="card-title">Stats</h5>
+                        <p class="card-text">When buying an NFT, there are elements that help to give it
+                            value over time, "Stats" shows some indicators of which NFTs are popular now
+                            and which will continue to be popular.</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="card s-about-us">
-                <div class="card-body">
-                    <i class="fas fa-rocket"></i>
-                    <h5 class="card-title">Launchpad function</h5>
-                    <p class="card-text">Magic Eden's minting platform, which is also used as a
-                        research program, makes the creation and distribution of NFT an easy process
-                        and requires little or no technical knowledge.</p>
+        <section id="stats">
+            <h2>Stats</h2>
+            <div id="stats-container">
+
+                <div class="card s-stats">
+                    <div id="image-container">
+                        <img src="https://img-cdn.magiceden.dev/rs:fill:400:400:0:0/plain/https://bafkreicndlrqersl63a7fpk6zzw73lsklj5bwsidk74n4solbcyz2g3viq.ipfs.nftstorage.link/"
+                            class="card-img-top" alt="...">
+                        <img id="solana"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5m9a4IEGuSR8eRW7xnSTUW6FOYxtelbHqIw&usqp=CAU"
+                            alt="">
+                    </div>
+                    <hr class="card-stats">
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-2 text-muted">Badged Collection</h6>
+                        <h5 class="card-title">DeGods</h5>
+                    </div>
+                </div>
+
+                <div class="stats-text-container">
+                    <div class="container-text">
+                        <div class="big-numbers">
+                            <div class="text-numbers">
+                                <h3>AVG. SALE 24</h4>
+                                    <h2>590.71</h6>
+                            </div>
+                            <div class="text-numbers">
+                                <h3>FLOOR PRICE</h4>
+                                    <h2>525.00</h6>
+                            </div>
+                        </div>
+
+                        <div class="specific-stats">
+                            <div class="specific-stats-text">
+                                <p><b>OWNERS</b> </p>
+                                <p>4,283</p>
+                            </div>
+                            <div class="specific-stats-text">
+                                <p><b>TOTAL SUPPLY</b> </p>
+                                <p>10k</p>
+                            </div>
+                            <div class="specific-stats-text">
+                                <p><b>SALES</b> </p>
+                                <p>22</p>
+                            </div>
+                            <div class="specific-stats-text">
+                                <p><b>24h % VOLUME</b> </p>
+                                <p>24,68%</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="card s-about-us">
-                <div class="card-body">
-                    <i class="fa-solid fa-plane-departure"></i>
-                    <h5 class="card-title">Upcoming launches</h5>
-                    <p class="card-text">Magic Eden tracks and vets the projects it features on the
-                        platform, also highlighting some of the most important upcoming launches. This
-                        can help investors save a lot of research work.</p>
-                </div>
-            </div>
-            <div class="card s-about-us">
-                <div class="card-body">
-                    <i class="fa-solid fa-chart-line"></i>
-                    <h5 class="card-title">Stats</h5>
-                    <p class="card-text">When buying an NFT, there are elements that help to give it
-                        value over time, "Stats" shows some indicators of which NFTs are popular now
-                        and which will continue to be popular.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="stats">
-        <h2>Stats</h2>
-        <div class="card s-stats">
-            <div id="image-container">
-                <img src="https://img-cdn.magiceden.dev/rs:fill:400:400:0:0/plain/https://bafkreicndlrqersl63a7fpk6zzw73lsklj5bwsidk74n4solbcyz2g3viq.ipfs.nftstorage.link/"
-                    class="card-img-top" alt="...">
-                <img id="solana"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5m9a4IEGuSR8eRW7xnSTUW6FOYxtelbHqIw&usqp=CAU"
-                    alt="">
 
-            </div>
-            <hr class="card-stats">
-            <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted">Badged Collection</h6>
-                <h5 class="card-title">DeGods</h5>
-            </div>
-        </div>
 
-    </section>
+    </main>
 
 
     <footer class="footer">
@@ -104,7 +142,8 @@
             <div class="row-footer">
                 <div class="footer-col">
                     <figure class="footer-logo">
-                        <img src="https://magiceden.io/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.fad4cb4c.png&w=640&q=75" alt="">
+                        <img src="https://magiceden.io/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.fad4cb4c.png&w=640&q=75"
+                            alt="">
                     </figure>
                 </div>
                 <div class="footer-col">
