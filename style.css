@@ -49,9 +49,6 @@
     box-sizing: border-box;
     font-family: 'Be Vietnam Pro', sans-serif;
 }
-.img-fluid{
-    max-width: 500px;
-}
 .container-footer{
     max-width: 1170px;
     margin: auto;
@@ -62,6 +59,13 @@
 }
 ul{
     list-style: none;
+}
+.footer-logo{
+    overflow: hidden;
+    max-width: 200px;
+}
+.footer-logo img{
+    width: 100%;
 }
 .footer{
     background-color: rgb(47, 47, 47);
