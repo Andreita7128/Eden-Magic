@@ -234,7 +234,7 @@ transition: all 0.5 ease-in-out;
 /* Header */
 
 header{
-    background-color: black;
+    background-color: rgb(18, 13, 24);
     position: fixed;
     top: 0;
     width: 100%;
@@ -259,7 +259,7 @@ nav ul li{
 .inputSearch{
     border-radius: 15px;
     padding: 7px;
-    background-color: rgb(66, 66, 66);
+    background-color: rgb(33, 22, 44);
     width: 30%;
 }
 .inputSearch::placeholder{
@@ -281,7 +281,7 @@ nav ul li a:hover{
 
 .btn{
     background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     border: 2px solid transparent;
     font-weight: 600;
@@ -293,3 +293,104 @@ nav ul li a:hover{
     transform: scale(1.2);
     transition: .3s;
 }
+
+/*Sección 1*/
+#launchpad-inicial {
+    background-color: rgb(18, 13, 24);
+    padding: 390px;
+    padding-bottom: 400px;
+  }
+
+  .contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .launchpad-button {
+    background-color: rgb(55, 55, 55);
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    color: #ffffff;
+    height: 30px;
+    width: 120px;
+    font-size: 11px;
+    font-weight: medium;
+    position: absolute;
+    margin-top: 300px;
+    top: 10px;
+    left: 400px;
+  }
+
+  .gotolaunchpad-button {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    color: rgb(18, 13, 24);
+    height: 70px;
+    width: 344px;
+    font-size: 100%;
+    font-weight: bold;
+    position: absolute;
+    margin-top: 650px;
+    top: 15px;
+    left: 400px;
+  }
+
+  .gotolaunchpad-button:hover {
+    color: rgba(228, 37, 100, 100);
+  }
+
+
+  .launchpad-text h2 {
+    color: white;
+    max-width: 50%;
+    font-weight: bold;
+    margin-bottom: 16px;
+    font-size: 40px;
+  }
+
+  .launchpad-text p {
+    color: white;
+    max-width: 50%;
+    font-size: 20px;
+  }
+
+  .slider {
+    position: relative;
+    float: right;
+    position: absolute;
+    top: 30%;
+    right: 300px;
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .slider ul {
+    padding: 0;
+    display: flex;
+
+    animation: slider 10s infinite;
+  }
+
+  .slider li{
+    width: 100%;
+    list-style: none;
+    height: 100%;
+  }
+
+  .slider li img {
+    width: 300%;
+  }
+
+  @keyframes slider{
+        0% { transform: translateX(0); } /* posición inicial */
+        100% { transform: translateX(-100%); } /* posición final */
+  }
+
+
+
+  
+
+  
+/*Sección 1 final*/
