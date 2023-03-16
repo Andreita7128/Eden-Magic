@@ -3,15 +3,17 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Be Vietnam Pro', sans-serif;
+    --color-background: --color-background;
+    --color-violet: 
 }
 body{
-    background-color: #120C18 !important;
+    background-color: --color-background !important;
 
 }
 
 main {
     height: 2184px;
-    background-color: #120C18;
+    background-color: --color-background;
 }
 
 h2 {
@@ -166,7 +168,7 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fit, 20rem);
     justify-content: center;
-    background-color: #120C18;
+    background-color: --color-background;
 }
 
 .s-finished-auctions {
@@ -216,7 +218,7 @@ p {
 
 /* Twitter */
 .twitter-section {
-    background-color: #120C18;
+    background-color: --color-background;
 }
 
 .twitter-container h2 {
@@ -255,7 +257,7 @@ p {
     height: 200px;
     overflow: hidden;
     position: relative;
-    background-color: #120C18;
+    background-color: --color-background;
     padding: 70px 0;
     max-width: 1170px;
     margin: auto;
