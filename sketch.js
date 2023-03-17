@@ -1,5 +1,6 @@
-const carousel = document.querySelector('.carousel');
-const comment = carrusel.querySelectorAll('.comment');
+
+const carousel = document.querySelector('.twitter-carousel');
+const comment = carousel.querySelectorAll('.comment');
 
 let index = 0;
 let interval = setInterval(() => {
