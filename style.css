@@ -48,7 +48,7 @@ h2 {
     color: white !important;
 }
 
-.card-text {
+.text-about {
     font-weight: normal;
     color: white;
 }
@@ -61,8 +61,8 @@ h2 {
 /* Responsive */
 @media only screen and (max-width: 768px) {
     #about-us {
-
-        margin: 10px;
+        margin-left: 15px;
+        margin-bottom: 15px;
         background-color: #120C18;
     }
 
@@ -73,7 +73,7 @@ h2 {
 
     .s-about-us {
         width: 90%;
-        margin: 0px;
+        margin-bottom: 10px;
         --bs-border-radius: 15px;
     }
 
@@ -181,7 +181,8 @@ p {
 /* Stats mobile */
 @media only screen and (max-width: 768px) {
     #stats {
-        margin: 0px 0px;
+        margin: 0px 10px 0px 10px;
+
     }
 
     #stats-container {
@@ -191,7 +192,8 @@ p {
     }
 
     .s-stats {
-        width: 80%;
+        width: 100%;
+        flex-direction: row !important;
     }
 
     #image-container {
@@ -508,7 +510,7 @@ nav ul li a:hover {
 /*Sección 1*/
 #launchpad-inicial {
     background-color: rgb(18, 13, 24);
-    padding: 100px 20px 400px;
+    padding: 100px 20px 10px;
 }
 
 .contenedor {
