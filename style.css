@@ -3,18 +3,17 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Be Vietnam Pro', sans-serif;
-    --color-background: --color-background;
-    --color-violet:
+
 }
 
 body {
-    background-color: --color-background !important;
+    background-color: #120C18 !important;
 
 }
 
 main {
     height: 2184px;
-    background-color: --color-background;
+    background-color: #120C18;
 }
 
 h2 {
@@ -38,16 +37,58 @@ h2 {
     width: 260px;
     margin: 0px 40px 20px 0px;
     --bs-border-radius: 15px;
+    background-color: #120C18 !important;
+    border-color: white !important;
+    border-width: 2pt !important;
 }
 
-.card-title {
+.title-about {
     margin-top: 10px;
     font-weight: bold;
+    color: white !important;
 }
 
 .card-text {
     font-weight: normal;
+    color: white;
 }
+
+.icon-about {
+    color: white;
+}
+
+/* About us Mobile */
+/* Responsive */
+@media only screen and (max-width: 768px) {
+    #about-us {
+
+        margin: 10px;
+        background-color: #120C18;
+    }
+
+    .container-cards {
+        display: flex;
+        justify-content: center;
+    }
+
+    .s-about-us {
+        width: 90%;
+        margin: 0px;
+        --bs-border-radius: 15px;
+    }
+
+    .card-title {
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 18pt;
+    }
+
+    .card-text {
+        font-weight: normal;
+        font-size: 16pt;
+    }
+}
+
 
 /* Section Stats */
 #stats {
@@ -65,8 +106,8 @@ h2 {
 .s-stats {
     margin: 0px !important;
     width: 400px;
-    --bs-border-color-translucent: #1F1F1F;
-    --bs-border-width: 2pt;
+    --bs-border-color-translucent: #E42575;
+    --bs-border-width: 2.5pt;
     justify-content: center;
     --bs-card-group-margin: 0px !important;
 }
@@ -77,7 +118,7 @@ h2 {
 }
 
 #solana {
-    width: 10%;
+    width: 10% !important;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -86,7 +127,7 @@ h2 {
 }
 
 .card-stats {
-    color: #1F1F1F;
+    color: #E42575;
     opacity: 100;
 }
 
@@ -95,7 +136,7 @@ h2 {
     padding: 30px;
     display: flex;
     margin: 0px;
-    background-color: #606060;
+    background-color: rgb(33, 22, 44);
     border-radius: 0px 15px 15px 0px;
     float: right;
 }
@@ -122,7 +163,9 @@ h2 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #A8A8A8;
+    border-width: 2px;
+    border-color: white;
+    background-color: #c192ff;
     border-radius: 8px;
 }
 
@@ -132,6 +175,63 @@ h2 {
 
 p {
     margin: 0px !important;
+}
+
+
+/* Stats mobile */
+@media only screen and (max-width: 768px) {
+    #stats {
+        margin: 0px 0px;
+    }
+
+    #stats-container {
+        margin: 10px 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .s-stats {
+        width: 80%;
+    }
+
+    #image-container {
+        width: 60%;
+    }
+
+    #solana {
+        width: 10%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-radius: 60px;
+        margin: 10px;
+    }
+
+    .stats-text-container {
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        margin: 0px;
+        border-radius: 0px 0px 15px 15px;
+        float: none;
+    }
+
+    .container-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .big-numbers {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .specific-stats-text {
+        width: 100%;
+        margin: 5px;
+        padding: 5px;
+    }
 }
 
 /* Section Launchpad */
@@ -147,7 +247,7 @@ p {
 
 .time {
     padding: 5px 10px;
-    background-color: #606060;
+    background-color: #E42575;
     border-radius: 20px;
     color: white;
 }
@@ -155,6 +255,38 @@ p {
 .image-launchpad {
     position: relative;
 }
+
+/* Launchpad mobile */
+@media only screen and (max-width: 768px) {
+
+    #launchpad {
+        margin: 50px 20px;
+    }
+
+    .container-cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .c-launchpad {
+        width: 45% !important;
+        margin-top: 15px;
+    }
+
+    .launch-title {
+        font-size: 18pt;
+    }
+
+    .launchpad-price {
+        font-size: 14pt;
+    }
+
+    .time {
+        font-size: 10pt;
+    }
+
+}
+
 
 
 /* Section Launchpad */
