@@ -1,14 +1,18 @@
 
+.finished-auctions-title{
+    
+}
 .finished-auctions {
     display: grid;
     grid-template-columns: repeat(auto-fit, 20rem);
     justify-content: center;
-    background-color: --color-background;
+    background-color: black;
 }
 
 .s-finished-auctions {
+    overflow: hidden;
     box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
-    background-color: rgba(255, 255, 255, 0.284);
+    background-color: rgba(248, 248, 248, 0.466);
     text-align: center;
     border-radius: 1rem;
     position: relative;
@@ -24,7 +28,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .f-auction {
     width: 8rem;
     clip-path: circle(60px at center);
