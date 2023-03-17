@@ -8,6 +8,7 @@
 
 .auction-text {
     color: rgb(223, 223, 223);
+    padding-bottom: 0;
 }
 .col-auction{
     flex-basis: 50%;
@@ -19,9 +20,11 @@
 }
 .title-auction{
     padding-left: 10%;
+    padding-bottom: 0;
 }
 .text-default{
 color: rgba(255, 255, 255, 0.445);
+padding: 0;
 }
 .button-place-bid {
     background: #E42575;
@@ -40,7 +43,7 @@ color: rgba(255, 255, 255, 0.445);
 .auction-img-left{
     width: 8rem;
     clip-path: circle(60px at center);
-    margin-top: 4.5rem;
+    margin-top: 10px;
 
 }
 .auction-img-right{
@@ -49,7 +52,10 @@ color: rgba(255, 255, 255, 0.445);
   border-radius: 1em;
   color: #1F1F1F;
 }
-
+.social-auction{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
 .col-auction .social-auction a {
     display: inline-block;
     height: 40px;
