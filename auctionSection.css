@@ -17,6 +17,26 @@
     padding: 50px;
 
 }
+.title-auction{
+    padding-left: 10%;
+}
+.text-default{
+color: rgba(255, 255, 255, 0.445);
+}
+.button-place-bid {
+    background: #E42575;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: 800;
+    padding: 10px 25px;
+    border-radius: 30px;
+}
+
+.button-place-bid:hover {
+    transform: scale(1.2);
+    transition: .3s;
+}
 .auction-img-left{
     width: 8rem;
     clip-path: circle(60px at center);
