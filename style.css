@@ -291,11 +291,19 @@ p {
 
 
 
-/* Section Launchpad */
+/* Section FAQ */
 #faq {
     margin: 50px 70px;
-
 }
+
+
+/* Launchpad mobile */
+@media only screen and (max-width: 768px) {
+    #faq {
+        margin: 10px 10px;
+    }
+}
+
 
 
 
