@@ -19,7 +19,7 @@
         transition: all 0.5 ease-in-out;
 }
 .twitter-title h2{
-    font-size: 2em;
+  font-size: 2em;
   text-align: center;
   margin: 0 auto;
   max-width: 80%;
@@ -33,7 +33,7 @@
   }
   
   .comment {
-    text-align: center;
+    align-items: center;
     display: inline-block;
     width: 800px;
     max-width: 80%;
@@ -44,6 +44,9 @@
     opacity: 0;
     transition: opacity 1s ease-in-out;
     color: rgb(255, 255, 255);
+  }
+  .comment p{
+    text-align: center;
   }
   @media (max-width: 768px) {
     .comment {
