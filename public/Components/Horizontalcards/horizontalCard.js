@@ -14,6 +14,7 @@ class cardHorizontal extends HTMLElement {
   }
   
   renderCards(products) {
+    console.log("goe")
     const container = document.createElement('div');
     container.classList.add('s-finished-auctions');
     products.forEach((product) => {
