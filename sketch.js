@@ -1,3 +1,4 @@
+import './Components/AuctionCards/auctionCard';
 
 const carousel = document.querySelector('.twitter-carousel');
 const comment = carousel.querySelectorAll('.comment');
@@ -11,3 +12,5 @@ let interval = setInterval(() => {
   }
   comment[index].style.opacity = 1;
 }, 2000);
+
+
