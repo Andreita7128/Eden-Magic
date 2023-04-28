@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+#comment {
+  width: 90%;
+  background: #FAFAFA;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  padding: 16px 22px;
+  background-color: #120C18;
+}
+#comment_user {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 17px;
+  color: white;
+}
+#comment_body {
+  padding-top: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+#comment_img {
+  width: 15%;
+  border-radius: 100%;
+}
+#comment_text {
+  width: 100%;
+  padding: 9px 23px;
+  margin-left: 15px;
+  background: white;
+  border-radius: 48px;
+}
+#comment_comment {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 15px;
+  color: #979C9E;
+}
+#comment_reactions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20px;
+  color: white;
+}
+#comment_likes {
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+#comment_number {
+  margin-left: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+  #comment_user {
+    font-size: 16px;
+  }
+  #comment_comment {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=comment.css.map */
