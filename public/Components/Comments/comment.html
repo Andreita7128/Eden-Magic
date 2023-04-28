@@ -28,7 +28,27 @@
 
 <body>
 
-    <comments-product></comments-product>
+        <article id="comment">
+                <p id="comment_user"> ${this.userName}</p>
+                <section id="comment_body">
+                    <img id="comment_img" src=" ${this.pictureProfile} ">
+                    <div id="comment_text">
+                        <p id="comment_comment"> ${this.comment} </p>
+                    </div>
+                </section>
+                <section id="comment_reactions">
+                    <div id="comment_likes">
+                        <i class="bi bi-heart"></i>
+                        <p id="comment_number"> ${this.likes}</p>
+                    </div>
+                    <i class="bi bi-three-dots"></i>
+                </section>
+            </article>
+        
+        <article id="comment">
+            <p id="comment_noComment"> ¡Parece que está un poco vacío por acá, sé el primero en comentar! </p>
+            </article>
+        
 
     <script type="module" src="../Components.js"></script>
 </body>
