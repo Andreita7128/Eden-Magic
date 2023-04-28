@@ -813,7 +813,10 @@ article.product-card-container {
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.product-card-content{
+    display: flex;
+    flex-direction: row;
 }
 
 img.product-img {
@@ -827,7 +830,6 @@ div.product-descripcion {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-grow: 1;
     color: white;
     margin-left: 40px;
 }
