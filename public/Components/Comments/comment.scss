@@ -49,7 +49,7 @@
         line-height: 15px;
         color: #979C9E;
     }
-
+    
     &_reactions {
         display: flex;
         flex-direction: row;
@@ -57,15 +57,23 @@
         padding-top: 20px;
         color: white;
     }
-
+    
     &_likes {
         display: flex;
         flex-direction: row;
         color: white;
     }
-
+    
     &_number {
         margin-left: 8px;
+    }
+    
+    &_noComment{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 15px;
+        color: white;
     }
 
 }
