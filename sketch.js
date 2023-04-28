@@ -1,4 +1,6 @@
-import './Components/AuctionCards/auctionCard';
+const home = document.querySelector('.home');
+const nftlist = document.querySelector('.nft-list');
+setButtons()
 
 const carousel = document.querySelector('.twitter-carousel');
 const comment = carousel.querySelectorAll('.comment');
@@ -14,3 +16,21 @@ let interval = setInterval(() => {
 }, 2000);
 
 
+function setButtons() {
+  const buttonHome = document.querySelector('.home-button')
+  const buttonNftList = document.querySelector('.nft-list-button')
+  console.log(buttonNftList);
+  buttonHome?.addEventListener('click', ()=> goToHome())
+  buttonNftList?.addEventListener('click', ()=> goToNftList())
+
+}
+function goToHome() {
+  nftlist.classList.add('hidden')
+  home.classList.remove('hidden')
+  setButtons()
+}
+function goToNftList() {
+  nftlist.classList.remove('hidden')
+  home.classList.add('hidden')
+  setButtons()
+}
