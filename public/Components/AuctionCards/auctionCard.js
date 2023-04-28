@@ -1,4 +1,4 @@
-export class auctionCard extends HTMLElement {
+export class AuctionCard extends HTMLElement {
     connectedCallback(){
       this.getData();
     }
@@ -59,5 +59,6 @@ export class auctionCard extends HTMLElement {
     }
   }
   
-  customElements.define('auction-card', auctionCard);
+  customElements.define('auction-card', AuctionCard);
+  export default AuctionCard;
   
