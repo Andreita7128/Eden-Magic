@@ -28,6 +28,7 @@
 }
 #comment_img {
   width: 15%;
+  height: width;
   border-radius: 100%;
 }
 #comment_text {

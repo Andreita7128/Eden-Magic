@@ -42,7 +42,7 @@
 @media screen and (max-width: 768px) {
   .product-card-container {
     width: 100%;
-    max-width: 100%;
+    max-width: 30%;
   }
   .product-card-container .product-img {
     width: 100%;

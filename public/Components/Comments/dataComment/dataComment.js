@@ -19,7 +19,7 @@ const dataComments = [
             "comment": "¡Nunca pensé que una imagen digital podría ser tan valiosa! Los NFTs me han demostrado lo contrario. ¡Increíble!",
             "likes": "144",
         }
-    ]
+    ],
     [
         {
             "pictureProfile": "https://images.unsplash.com/photo-1534180477871-5d6cc81f3920?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
@@ -39,7 +39,7 @@ const dataComments = [
                 "comment": "Los NFTs han cambiado la forma en que pienso sobre el arte digital. Ahora lo veo como algo valioso e importante. ¡Muy recomendable!",
                 "likes": "482",
         }
-    ]
+    ],
 
     [
         {
@@ -48,7 +48,7 @@ const dataComments = [
                 "comment": "Los NFTs son una forma innovadora y emocionante de poseer arte digital. ¡Me encanta mi colección y estoy emocionado de agregar más en el futuro!",
                 "likes": "196",
         }
-    ]
+    ],
 
     [
         {
@@ -64,7 +64,7 @@ const dataComments = [
                 "likes": "836",
         }
     ]
-
+,
     [
         {
             "pictureProfile": "https://images.unsplash.com/photo-1605949405965-d49ada3f9189?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
@@ -73,7 +73,7 @@ const dataComments = [
                 "likes": "420",
         }
     ]
-
+,
     [
         {
             "pictureProfile": "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
