@@ -1,4 +1,4 @@
-class horizontalCard extends HTMLElement {
+class HorizontalCard extends HTMLElement {
   connectedCallback() {
     this.getData();
   }
@@ -62,4 +62,5 @@ class horizontalCard extends HTMLElement {
   }
 }
 
-customElements.define('card-horizontal', horizontalCard);
+customElements.define('card-horizontal', HorizontalCard);
+export default HorizontalCard;
