@@ -21,7 +21,11 @@ class Comment extends HTMLElement {
     }
 
     connectedCallback() {
-        this.render()
+        if (userName === null) {
+            this.renderEmpty();
+        } else {
+            this.render()
+        }
     }
 
     attributeChangedCallback(propName, oldValue, newValue) {
