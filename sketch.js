@@ -15,6 +15,7 @@ let interval = setInterval(() => {
   comment[index].style.opacity = 1;
 }, 2000);
 
+
 function setButtons() {
   const buttonHome = document.querySelector('.home-button')
   const buttonNftList = document.querySelector('.nft-list-button')
