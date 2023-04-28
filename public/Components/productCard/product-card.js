@@ -1,4 +1,4 @@
-export default class CardNFT extends HTMLElement {
+export class CardNFT extends HTMLElement {
   constructor() {
     console.log('Constructor ejecutado');
     super();
@@ -6,14 +6,17 @@ export default class CardNFT extends HTMLElement {
   }
 
   connectedCallback() {
+    this.addEventListener('click', () => {
+      window.location.href = 'infoNFT.html';
+    });
     this.getData();
   }
 
   async getData() {
     const response = await fetch('https://udemy-d3-firebase-6e372-default-rtdb.firebaseio.com/products.json');
     const data = await response.json();
-    const product = data[0]; 
-  
+    const product = data[0];
+
     if (product) {
       this.render(product);
     } else {
@@ -42,8 +45,10 @@ export default class CardNFT extends HTMLElement {
         </div>
       </article>
     `;
+
     this.shadowRoot.appendChild(template.content.cloneNode(true));
   }
 }
 
 customElements.define('product-card', CardNFT);
+export default CardNFT;
