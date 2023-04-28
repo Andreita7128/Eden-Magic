@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./public/Components/productCard/product-card.js">
     <link rel="stylesheet" href="/Components/AuctionCards/auctionCard.css">
     <link rel="stylesheet" type="text/css" href="auctionSection.css">
     <link rel="stylesheet" type="text/css" href="finishedAuctionSection.css">
@@ -30,7 +32,6 @@
 
 <body>
 
-    <auction-card></auction-card>
 
             <main class="home">
                 <!---Sección launchpad inicial-->
@@ -186,32 +187,14 @@
                     </div>
                 </section>
 
-
                 <!---Sección popular-->
                 <section class="popular-collections">
                     <h2>Popular Collections</h2>
-                    <div class="cards-container">
-                        <div class="card cardo">
-                            <img src="img/Frame 84.png">
-                            <h3>DMI Crew</h3>
-                            <p>22,81%⬆️</p>
-                        </div>
-                        <div class="cardo">
-                            <img src="img/Frame 85.png">
-                            <h3>VOO</h3>
-                            <p>22,81%⬆⬇️</p>
-                        </div>
-                        <div class="cardo">
-                            <img src="img/Frame 86.png">
-                            <h3>Mindwalk</h3>
-                            <p>22,81%⬆⬇️</p>
-                        </div>
-                        <div class="cardo">
-                            <img src="img/Frame 87.png">
-                            <h3>N0ALCR4</h3>
-                            <p>22,81%⬆️</p>
-                        </div>
-                    </div>
+
+                    <product-card></product-card>
+                    <product-card></product-card>
+                    <product-card></product-card>
+
                 </section>
 
                 <!---Sección noticias-->
