@@ -5,7 +5,7 @@ export class AuctionCard extends HTMLElement {
   
     async getData() {
       try {
-        const response = await fetch('https://nftproducts.free.beeceptor.com/nfts');
+        const response = await fetch('https://magic-eden-nfts-default-rtdb.firebaseio.com/products.json');
         const data = await response.json();
         this.renderCards(data.products);
       } catch (error) {
