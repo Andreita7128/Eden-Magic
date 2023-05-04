@@ -3,8 +3,8 @@ const nftlist = document.querySelector('.nft-list');
 setButtons()
 
 const carousel = document.querySelector('.twitter-carousel');
-const comment = carousel.querySelectorAll('.comment');
-
+//const comment = carousel.querySelectorAll('.comment');
+/*
 let index = 0;
 let interval = setInterval(() => {
   comment[index].style.opacity = 0;
@@ -14,7 +14,7 @@ let interval = setInterval(() => {
   }
   comment[index].style.opacity = 1;
 }, 2000);
-
+*/
 
 function setButtons() {
   const buttonHome = document.querySelector('.home-button')

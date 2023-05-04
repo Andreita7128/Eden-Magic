@@ -21,6 +21,15 @@
 </head>
 
 <body>
+
+
+    <!---Creación de artículo-->
+
+    <header>
+        <magic-nav></magic-nav>
+    </header>
+
+
     <article class="product-card-container">
         <div class="product-card-content">
             <img src="" class="product-img" />
@@ -38,31 +47,91 @@
         </div>
     </article>
 
-    <script>
+    <script type="module">
+        import dataComments from "./public/Components/Comments/dataComment/dataComment.js";
 
+        const COMMENTS = dataComments;
         let position = 0;
         let data = [];
-    
+        let products = []
+
         async function getInfo() {
-            const response = await fetch('https://udemy-d3-firebase-6e372-default-rtdb.firebaseio.com/products.json');
+            const response = await fetch('https://magic-eden-nfts-default-rtdb.firebaseio.com/products.json');
             data = await response.json();
+
+            products = data.map(d => {
+                let dCopy = {
+                    ...d
+                };
+                let hasComment = Math.random() > 0.5;
+                
+                    let indexR = Math.floor( Math.random() * ((6 - 1 + 1) + 1))
+                    dCopy.comment = [COMMENTS[indexR]]
+                    return dCopy
+                
+                    
+            })
+            console.log(products);
+
             updateProductInfo();
         }
     
+        // Función para actualizar la información de la tarjeta
         function updateProductInfo() {
+            // Obtener los datos del producto actual
             const product = data[position];
+
+            // Actualizar el nombre del producto
+
+        function updateProductInfo() {
+            const product = products[position];
             const productName = document.querySelector('.product-descripcion h2');
             productName.innerText = product.name;
-            const productCollection = document.querySelector('.product-descripcion h2:last-of-type');
+
+            // Actualizar la colección del producto
+            const productCollection = document.querySelector('.product-descripcion h2:last-of-type'); //h2:last-of-type para diferenciar
             productCollection.innerText = product.collection;
+
+            // Actualizar la imagen del producto
             const productImg = document.querySelector('.product-img');
             productImg.src = product.url;
+
+            // Actualizar la descripción, la criptomoneda y el precio del producto
             const productDesc = document.querySelectorAll('.product-descripcion p');
             productDesc.item(0).innerText = product.description;
             productDesc.item(1).innerText = product.cryptocurrency;
             productDesc.item(2).innerText = product.price;
+            let comments = document.getElementById("comments")
+            comments.innerHTML = ""
+            product.comment.forEach((item)=>{
+                console.log(item);
+                item.forEach((com)=>{
+                    comments.innerHTML+= ` <link rel="stylesheet" href="../../../public/Components/Comments/comment.css">
+    <article id="comment">
+            <p id="comment_user"> ${com.userName}</p>
+            <section id="comment_body">
+                <img id="comment_img" src=" ${com.pictureProfile} ">
+                <div id="comment_text">
+                    <p id="comment_comment"> ${com.comment} </p>
+                </div>
+            </section>
+            <section id="comment_reactions">
+                <div id="comment_likes">
+                    <i class="fa fa-heart" style="margin-right: 16px"></i>
+                    <p id="comment_number"> ${com.likes}</p>
+                </div>
+                <i class="bi bi-three-dots"></i>
+            </section>
+        </article>`
+                })
+                
+            })
+                
+                
+
+            
         }
-    
+
         const nextBtn = document.querySelector('.next-btn');
         nextBtn.addEventListener('click', () => {
             position++;
@@ -71,11 +140,21 @@
             }
             updateProductInfo();
         });
-    
+
         getInfo();
-    
     </script>
 
+    <section id="comments">
+        <h2>Comentarios</h2>
+    </section>
+
+    <footer>
+        <magic-footer></magic-footer>
+    </footer>
+
+    <script type="module" src="/public/Components/Components.js"></script>
+
+    <script type="module" src="/comment.js"></script>
 </body>
 
 </html>
