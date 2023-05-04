@@ -7,16 +7,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/public/Components/AuctionCards/auctionCard.css">
-    
+    <link rel="stylesheet" href="style.css">
     <title>Card web component</title>
 </head>
 
 <body>
 
-    <auction-card></auction-card>
-    <script type="module" src="/public/Components/AuctionCards/AuctionCard.js"></script>
-    
-</body>
+    <header>
+        <magic-nav></magic-nav>
+    </header>
 
+    <div class="filters">
+        <button class="filter-button active" data-category="all">All</button>
+        <button class="filter-button" data-category="price">Price</button>
+        <button class="filter-button" data-category="sol">Sol</button>
+        <button class="filter-button" data-category="eth">Eth</button>
+        <button class="filter-button" data-category="btc">Btc</button>
+      </div>           
+    <auction-card></auction-card>
+
+    <footer>
+        <magic-footer></magic-footer>
+    </footer>
+
+    <script type="module" src="auctionCard.js"></script>
+    <script type="module" src="/public/Components/Components.js"></script>
+</body>
 </html>

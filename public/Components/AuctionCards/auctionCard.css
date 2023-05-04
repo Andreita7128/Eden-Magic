@@ -4,6 +4,31 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #120C18 !important;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.filters .filter-button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: #eee;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.filters .filter-button.active {
+  background-color: #333;
+  color: #fff;
+}
+
 .auction-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, 20rem);
