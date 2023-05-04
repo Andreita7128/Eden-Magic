@@ -67,40 +67,38 @@ export class AuctionCard extends HTMLElement {
       
     });
   }
-
-
+  
+  filterByCryptocurrency(crypto) {
+    return this.nfts.filter(n => n.cryptocurrency === crypto);
+  }
+  
   filterProducts(category) {
+    const nfts = this.nfts
     console.log(category);
+    console.log(nfts)
     switch (category) {
       case 'price':
-        this.renderCards(this.nfts.sort((a, b) => b.price - a.price));
+        this.renderCards(nfts.sort((a, b) => b.price - a.price));
         break;
       case 'sol':
-        this.renderCards(this.nfts.filter(n => n.cryptocurrency === 'SOL'));
+        this.renderCards(this.filterByCryptocurrency('SOL'));
         break;
       case 'eth':
-        this.renderCards(this.nfts.filter(n => n.cryptocurrency === 'ETH'));
+        this.renderCards(this.filterByCryptocurrency('ETH'));
         break;
       case 'btc':
-        this.renderCards(this.nfts.filter(n => n.cryptocurrency === 'BTC'));
+        this.renderCards(this.filterByCryptocurrency('BTC'));
         break;
       default:
-        this.renderCards(this.nfts)
+        this.renderCards(nfts)
         break;
     }
-    // if (category === 'All') {
-    //   this.nfts = Object.values(this.nfts);
-    // } else if (category === 'SOL' || category === 'ETH' || category === 'BTC') {
-    //   this.nfts = Object.values(this.nfts).filter(product => product.cryptocurrency === 'SOL');
-    // } else if (category === 'price') {
-    //   this.nfts = Object.values(this.nfts).filter(product => product.price <= 1);
-    // } else {
-    //   this.nfts = Object.values(this.nfts).filter(product => product.collection.toLowerCase() === category.toLowerCase());
-    // }
-    // this.renderCards(this.nfts);
   }
+
+  
+
 
 }
 
 customElements.define('auction-card', AuctionCard);
-export default auctionCard;
+export default AuctionCard;
