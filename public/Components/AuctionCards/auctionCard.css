@@ -8,26 +8,42 @@ body {
   background-color: #120C18 !important;
 }
 
+.dropdowns {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 20px;
+  padding-left: 20%;
+}
+
+.dropdown {
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.dropdown-menu {
+  border-radius: 10px;
+}
+
 .filters {
   display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+  justify-content: left;
+  margin-top: 50px;
+  padding-left: 20%;
 }
 .filters .filter-button {
   background-color: #E42575;
-  border-radius: 8px;
+  border-radius: 10px;
   border-style: none;
   box-sizing: border-box;
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
   height: 40px;
   line-height: 20px;
   list-style: none;
-  margin: 0;
+  margin: 10px;
   outline: none;
   padding: 10px 16px;
   position: relative;
@@ -40,9 +56,9 @@ body {
   -webkit-user-select: none;
   touch-action: manipulation;
 }
-.filters .filter-button .button-1:hover,
-.filters .filter-button .button-1:focus {
-  background-color: #F082AC;
+.filters .filter-button .filter-button:hover {
+  color: #E42575;
+  transition: 0.3s;
 }
 .filters .filter-button.active {
   background-color: #F082AC;

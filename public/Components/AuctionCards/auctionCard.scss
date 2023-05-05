@@ -12,14 +12,28 @@ body {
   background-color: #120C18 !important;
 
 }
+.dropdowns{
+  display: flex;
+  justify-content: left;
+  margin-bottom: 20px;
+  padding-left: 20%;
+}
+.dropdown{
+margin: 10px;
+border-radius: 10px;
+}
+.dropdown-menu{
+  border-radius: 10px;
+}
 .filters {
   display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+  justify-content: left;
+  margin-top: 50px;
+  padding-left: 20%;
 
   .filter-button {
   background-color: $primary-color-text;
-  border-radius: 8px;
+  border-radius: 10px;
   border-style: none;
   box-sizing: border-box;
   color: #FFFFFF;
@@ -30,21 +44,23 @@ body {
   height: 40px;
   line-height: 20px;
   list-style: none;
-  margin: 0;
+  margin: 10px;
   outline: none;
   padding: 10px 16px;
   position: relative;
-  text-align: center;
+  text-align:center;
   text-decoration: none;
   transition: color 100ms;
   vertical-align: baseline;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  .button-1:hover,
-  .button-1:focus {
-    background-color: #F082AC;
+  
+  .filter-button:hover{
+    color: #E42575;
+    transition: .3s;
   }
+  
     &.active {
       background-color: #F082AC;
       color: #fff;
