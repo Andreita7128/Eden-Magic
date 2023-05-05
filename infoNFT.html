@@ -75,28 +75,15 @@
 
             updateProductInfo();
         }
-    
-        // Función para actualizar la información de la tarjeta
-        function updateProductInfo() {
-            // Obtener los datos del producto actual
-            const product = data[position];
-
-            // Actualizar el nombre del producto
 
         function updateProductInfo() {
             const product = products[position];
             const productName = document.querySelector('.product-descripcion h2');
             productName.innerText = product.name;
-
-            // Actualizar la colección del producto
-            const productCollection = document.querySelector('.product-descripcion h2:last-of-type'); //h2:last-of-type para diferenciar
+            const productCollection = document.querySelector('.product-descripcion h2:last-of-type');
             productCollection.innerText = product.collection;
-
-            // Actualizar la imagen del producto
             const productImg = document.querySelector('.product-img');
             productImg.src = product.url;
-
-            // Actualizar la descripción, la criptomoneda y el precio del producto
             const productDesc = document.querySelectorAll('.product-descripcion p');
             productDesc.item(0).innerText = product.description;
             productDesc.item(1).innerText = product.cryptocurrency;
