@@ -11,7 +11,7 @@ export class AuctionCard extends HTMLElement {
     this.getData()
 
     this.addEventListener('click', () => {
-      window.location.href = 'infoNFT.html';
+      window.location.href = '../../../infoNFT.html';
     });
   }
 

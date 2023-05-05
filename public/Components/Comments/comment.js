@@ -19,7 +19,8 @@ class Comment extends HTMLElement {
 
     connectedCallback() {
         
-        if (this.username === null || this.username === undefined) {
+        if (this.username === '') {
+            console.log("hi");
             this.renderEmpty();
         } else {
             this.render()
@@ -53,18 +54,11 @@ class Comment extends HTMLElement {
 
                 break;
         }
-        if (this.username === null || this.username === undefined) {
-            this.renderEmpty();
-        } else {
-            this.render()
-        }
 
     }
 
 
     render() {
-        let imglink = "" + this.pictureProfile
-        console.log(this.pictureprofile);
         this.innerHTML = `
     <link rel="stylesheet" href="../../../public/Components/Comments/comment.css">
     <article id="comment">
