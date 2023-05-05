@@ -9,7 +9,12 @@ export class AuctionCard extends HTMLElement {
     this.collectionSelect = document.querySelectorAll('.collection-dropdown');
     this.priceSelect = document.querySelectorAll('.price-dropdown');
     this.getData()
+
+    this.addEventListener('click', () => {
+      window.location.href = '../../../infoNFT.html';
+    });
   }
+
   async getData() {
     const card = document.querySelector('.auction-card');
     if (card) {
@@ -130,6 +135,7 @@ getData() {
       
     });
   }
+
   
   filterByCryptocurrency(crypto) {
     return this.nfts.filter(n => n.cryptocurrency === crypto);
@@ -153,6 +159,7 @@ getData() {
 
 
   /*
+
 filterCollections(name){
   const nfts = this.nfts
   console.log(category);
