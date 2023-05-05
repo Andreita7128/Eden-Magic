@@ -11,6 +11,11 @@ export class AuctionCard extends HTMLElement {
     this.getData()
   }
   async getData() {
+    const card = document.querySelector('.auction-card');
+    if (card) {
+      const bidButton = card.querySelector('.bid-button');
+      bidButton.addEventListener('click', this.handleBidButtonClick);
+    }
     try {
       const response = await fetch('https://magic-eden-nfts-default-rtdb.firebaseio.com/products.json');
       const data = await response.json();
@@ -20,7 +25,15 @@ export class AuctionCard extends HTMLElement {
     } catch (error) {
       console.error(error);
     }
-
+/*
+getData() {
+  const card = document.querySelector('.auction-card');
+  if (card) {
+    const bidButton = card.querySelector('.bid-button');
+    bidButton.addEventListener('click', this.handleBidButtonClick);
+  }
+}
+*/
     this.filterButtons.forEach((button) => {
       button.addEventListener('click', () => {
         this.filterButtons.forEach((button) => button.classList.remove('active'));
@@ -29,13 +42,22 @@ export class AuctionCard extends HTMLElement {
         this.filterProducts(selectedCategory);
       });
     });
+
     //escucha las opciones de las colecciones
-    this.collectionSelect.forEach((drop) => {
+   console.log(this.collectionSelect)
+    this.collectionFilter.addEventListener("click", () => {
+      const selectedCollection = this.collectionFilter.dataset.category;
+      const filteredData = filterByCollection(this.filteredNfts, selectedCollection);
+      renderCards(filteredData);
+    });
+    /*
+    this.collectionSelect.options.forEach((drop) => {
       drop.addEventListener('change', () => {
+        console.log(this.collectionSelect, 'hola')
         const selectedCollection = this.collectionSelect.value;
       this.filterByCollection(selectedCollection);
       });
-    });
+    });*/
 
 /*
     this.collectionSelect.addEventListener('change', () => {
@@ -52,7 +74,13 @@ export class AuctionCard extends HTMLElement {
   
   }
 
-
+  filterByCollection(data, collection) {
+    if (collection === "all") {
+      return data;
+    } else {
+      return data.filter(item => item.collection === collection);
+    }
+  }
   renderCards(products) {
     console.log('rendering');
     // Set to default the html content to empty, then render everything up
