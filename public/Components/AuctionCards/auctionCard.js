@@ -1,4 +1,3 @@
-
 export class AuctionCard extends HTMLElement {
   constructor() {
     super();
@@ -33,8 +32,9 @@ export class AuctionCard extends HTMLElement {
   renderCards(products) {
     console.log('rendering');
     // Set to default the html content to empty, then render everything up
-    this.innerHTML = ` <style>
+    this.innerHTML = `<style>
     @import url('auctionCard.css');
+    @import url('dropdown.css');
   </style>`;
     const cardContainer = document.createElement('div');
     cardContainer.classList.add('auction-container');
@@ -77,9 +77,6 @@ export class AuctionCard extends HTMLElement {
     console.log(category);
     console.log(nfts)
     switch (category) {
-      case 'price':
-        this.renderCards(nfts.sort((a, b) => b.price - a.price));
-        break;
       case 'sol':
         this.renderCards(this.filterByCryptocurrency('SOL'));
         break;
@@ -94,11 +91,12 @@ export class AuctionCard extends HTMLElement {
         break;
     }
   }
-
-  
-
-
 }
 
+/*
+ case 'price':
+        this.renderCards(nfts.sort((a, b) => b.price - a.price));
+        break;
+        */
 customElements.define('auction-card', AuctionCard);
 export default AuctionCard;
