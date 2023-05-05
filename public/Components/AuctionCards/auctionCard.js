@@ -81,6 +81,7 @@ getData() {
       return data.filter(item => item.collection === collection);
     }
   }
+  console
   renderCards(products) {
     console.log('rendering');
     // Set to default the html content to empty, then render everything up
@@ -122,6 +123,7 @@ getData() {
   filterByCryptocurrency(crypto) {
     return this.nfts.filter(n => n.cryptocurrency === crypto);
   }
+  
   //filtrado de la colección
   filterByCollection(collection) {
     if (collection === 'all') {
@@ -137,6 +139,9 @@ getData() {
       this.filterProducts(selectedCategory);
     }
   }
+
+
+  /*
 filterCollections(name){
   const nfts = this.nfts
   console.log(category);
@@ -180,6 +185,7 @@ filterCollections(name){
       break;
   }
 }
+*/
 
   //filtrado del precio
 
