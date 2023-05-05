@@ -39,7 +39,9 @@ class Comment extends HTMLElement {
     <article id="comment">
             <p id="comment_user"> ${this.userName}</p>
             <section id="comment_body">
-                <img id="comment_img" src=" ${this.pictureProfile} ">
+            <div id="comment_img_container">
+                    <img id="comment_img" src=" ${this.pictureProfile} ">
+                </div>
                 <div id="comment_text">
                     <p id="comment_comment"> ${this.comment} </p>
                 </div>
