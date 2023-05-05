@@ -9,7 +9,12 @@ export class AuctionCard extends HTMLElement {
     this.collectionSelect = document.querySelector('.collection-dropdown');
     this.priceSelect = document.querySelector('.price-dropdown');
     this.getData()
+
+    this.addEventListener('click', () => {
+      window.location.href = 'infoNFT.html';
+    });
   }
+
   async getData() {
     try {
       const response = await fetch('https://magic-eden-nfts-default-rtdb.firebaseio.com/products.json');
@@ -90,6 +95,7 @@ export class AuctionCard extends HTMLElement {
       
     });
   }
+
   
   filterByCryptocurrency(crypto) {
     return this.nfts.filter(n => n.cryptocurrency === crypto);
@@ -109,6 +115,7 @@ export class AuctionCard extends HTMLElement {
       this.filterProducts(selectedCategory);
     }
   }
+
 filterCollections(name){
   const nfts = this.nfts
   console.log(category);
