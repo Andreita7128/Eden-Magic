@@ -1,46 +1,77 @@
-export var AttributeComment;
-(function (AttributeComment) {
-    AttributeComment["pictureProfile"] = "pictureProfile";
-    AttributeComment["userName"] = "userName";
-    AttributeComment["comment"] = "comment";
-    AttributeComment["likes"] = "likes";
-})(AttributeComment || (AttributeComment = {}));
 class Comment extends HTMLElement {
     constructor() {
         super()
+        this.pictureprofile = '';
+        this.picture ="";
+        this.username ='';
+        this.comment ='';
+        this.likes ='';
     }
 
     static get observedAttributes() {
-        const attrs = {
-            pictureProfile: null,
-            userName: null,
-            comment: null,
-            likes: null,
-        };
-        return Object.keys(attrs);
+        return [
+            "pictureprofile",
+            "username",
+            "comment",
+            "likes",
+        ]
     }
 
     connectedCallback() {
-        if (userName === null) {
+        
+        if (this.username === null || this.username === undefined) {
             this.renderEmpty();
         } else {
             this.render()
         }
     }
 
-    attributeChangedCallback(propName, oldValue, newValue) {
-        this[propName] = newValue;
-        this.render();
+    attributeChangedCallback(nameAtr, oldValue, newValue) {
+
+        switch (nameAtr) {
+            case "pictureprofile":
+
+                this.pictureprofile = newValue
+
+                break;
+
+            case "username":
+
+                this.username = newValue
+
+                break;
+
+            case "comment":
+
+                this.comment = newValue
+
+                break;
+            
+            case "likes":
+
+                this.likes = newValue
+
+                break;
+        }
+        if (this.username === null || this.username === undefined) {
+            this.renderEmpty();
+        } else {
+            this.render()
+        }
+
     }
 
+
     render() {
+        let imglink = "" + this.pictureProfile
+        console.log(this.pictureprofile);
         this.innerHTML = `
     <link rel="stylesheet" href="../../../public/Components/Comments/comment.css">
     <article id="comment">
-            <p id="comment_user"> ${this.userName}</p>
+            <p id="comment_user"> ${this.username}</p>
             <section id="comment_body">
             <div id="comment_img_container">
-                    <img id="comment_img" src=" ${this.pictureProfile} ">
+                    <img id="comment_img" src=${this.pictureprofile}>
                 </div>
                 <div id="comment_text">
                     <p id="comment_comment"> ${this.comment} </p>
