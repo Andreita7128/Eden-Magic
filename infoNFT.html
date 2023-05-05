@@ -66,11 +66,6 @@
                     ...d
                 };
                 return dCopy
-               /* let hasComment = Math.random() > 0.5;
-                
-                    let indexR = Math.floor( Math.random() * ((6 - 1 + 1) + 1))
-                    dCopy.comment = [COMMENTS[indexR]]*/
-                    
                     
                 })
             console.log(products);
@@ -101,8 +96,11 @@
                     comment="${com.comment}"
                     ></comments-product>`
                 })   
+            } else {
+                commentas.innerHTML+= ` 
+                    <comments-product></comments-product>`
             }
-           
+
                 
                 
                 
