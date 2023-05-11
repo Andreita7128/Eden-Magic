@@ -32,6 +32,7 @@
     </header>
 
 
+    <!---Inicio Chris-->
     <article class="product-card-container">
         <div class="product-card-content">
             <img src="" class="product-img" />
@@ -50,10 +51,12 @@
 
     <button class="next-btn">Ver siguiente</button>
     <script type="module">
-       // import dataComments from "./public/Components/Comments/dataComment/dataComment.js";
+        // import dataComments from "./public/Components/Comments/dataComment/dataComment.js";
 
-     //   const COMMENTS = dataComments;
-        let position = 0;
+        //   const COMMENTS = dataComments;
+        let url = window.location.search
+        let searchPara = new URLSearchParams(url);
+        let position = searchPara.get('id').replace('"', "");
         let data = [];
         let products = []
 
@@ -66,8 +69,8 @@
                     ...d
                 };
                 return dCopy
-                    
-                })
+
+            })
             console.log(products);
 
             updateProductInfo();
@@ -85,28 +88,30 @@
             productDesc.item(0).innerText = product.description;
             productDesc.item(1).innerText = product.cryptocurrency;
             productDesc.item(2).innerText = product.price;
+
+            //Andrea
             let commentas = document.getElementById("comments")
             commentas.innerHTML = ""
-            
-            
-                if (product.comments !== 'null') {
-                    product.comments.forEach((com)=>{
-                    commentas.innerHTML+= ` 
+
+
+            if (product.comments !== 'null') {
+                product.comments.forEach((com) => {
+                    commentas.innerHTML += ` 
                     <comments-product pictureprofile="${com.picture}" userName="${com.name}" likes="${com.likes}"
                     comment="${com.comment}"
                     ></comments-product>`
-                })   
+                })
             } else {
-                commentas.innerHTML+= ` 
+                commentas.innerHTML += ` 
                     <comments-product></comments-product>`
             }
 
-                
-                
-                
-                
 
-            
+
+
+
+
+
         }
 
         const nextBtn = document.querySelector('.next-btn');

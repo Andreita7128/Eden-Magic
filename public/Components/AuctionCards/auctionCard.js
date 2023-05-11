@@ -4,6 +4,7 @@ export class AuctionCard extends HTMLElement {
     this.nfts = [];
     this.filteredNfts = [];
   }
+
   connectedCallback() {
     this.filterButtons = document.querySelectorAll('.filter-button');
     this.collectionSelect = document.querySelectorAll('.collection-dropdown');
@@ -26,20 +27,20 @@ export class AuctionCard extends HTMLElement {
       const data = await response.json();
       this.nfts = Object.values(data);
       this.filteredNfts = [...this.nfts]
-      console.log( this.filteredNfts)
+      console.log(this.filteredNfts)
       this.renderCards(this.filteredNfts);
     } catch (error) {
       console.error(error);
     }
-/*
-getData() {
-  const card = document.querySelector('.auction-card');
-  if (card) {
-    const bidButton = card.querySelector('.bid-button');
-    bidButton.addEventListener('click', this.handleBidButtonClick);
-  }
-}
-*/
+    /*
+    getData() {
+      const card = document.querySelector('.auction-card');
+      if (card) {
+        const bidButton = card.querySelector('.bid-button');
+        bidButton.addEventListener('click', this.handleBidButtonClick);
+      }
+    }
+    */
     this.filterButtons.forEach((button) => {
       button.addEventListener('click', () => {
         this.filterButtons.forEach((button) => button.classList.remove('active'));
@@ -50,22 +51,22 @@ getData() {
     });
 
     //escucha las opciones de las colecciones
-   console.log(this.collectionSelect)
-   this.collectionSelect.forEach(dropdown => {
-    dropdown.addEventListener('click', async () => {
-      const category = dropdown.getAttribute('data-category');
-      const priceRange = document.querySelector('.price-dropdown.active').getAttribute('value');
-      const products = await fetchProducts(category, priceRange);
-      updateProductCards(products);
+    console.log(this.collectionSelect)
+    this.collectionSelect.forEach(dropdown => {
+      dropdown.addEventListener('click', async () => {
+        const category = dropdown.getAttribute('data-category');
+        const priceRange = document.querySelector('.price-dropdown.active').getAttribute('value');
+        const products = await fetchProducts(category, priceRange);
+        updateProductCards(products);
+      });
     });
-  });
-   /*
-    this.collectionFilter.addEventListener("click", () => {
-      const selectedCollection = this.collectionFilter.dataset.category;
-      const filteredData = filterByCollection(this.filteredNfts, selectedCollection);
-      renderCards(filteredData);
-    });
-    */
+    /*
+     this.collectionFilter.addEventListener("click", () => {
+       const selectedCollection = this.collectionFilter.dataset.category;
+       const filteredData = filterByCollection(this.filteredNfts, selectedCollection);
+       renderCards(filteredData);
+     });
+     */
     /*
     this.collectionSelect.options.forEach((drop) => {
       drop.addEventListener('change', () => {
@@ -75,19 +76,19 @@ getData() {
       });
     });*/
 
-/*
-    this.collectionSelect.addEventListener('change', () => {
-      const selectedCollection = this.collectionSelect.value;
-      this.filterByCollection(selectedCollection);
-    });
-
-*/
-//escucha las opciones del rango de precio
+    /*
+        this.collectionSelect.addEventListener('change', () => {
+          const selectedCollection = this.collectionSelect.value;
+          this.filterByCollection(selectedCollection);
+        });
+    
+    */
+    //escucha las opciones del rango de precio
     this.priceSelect.addEventListener('change', () => {
       const selectedPriceRange = this.priceSelect.value;
       this.filterByPriceRange(selectedPriceRange);
     });
-  
+
   }
 
   filterByCollection(data, collection) {
@@ -97,7 +98,8 @@ getData() {
       return data.filter(item => item.collection === collection);
     }
   }
-  console
+
+
   renderCards(products) {
     console.log('rendering');
     // Set to default the html content to empty, then render everything up
@@ -107,7 +109,10 @@ getData() {
     const cardContainer = document.createElement('div');
     cardContainer.classList.add('auction-container');
     this.appendChild(cardContainer);
-    products.forEach(nft => {
+    products.forEach((nft, index) => {
+      let url = "./infoNFT.html?id=" + index;
+      const link = document.createElement('a')
+      link.href = url;
       const card = document.createElement('div');
       card.classList.add('card');
 
@@ -131,12 +136,14 @@ getData() {
       card.appendChild(nftName);
       card.appendChild(collectionName);
       card.appendChild(priceElement);
-      cardContainer.appendChild(card);
-      
+      link.appendChild(card)
+      cardContainer.appendChild(link);
+
+
     });
   }
 
-  
+
   filterByCryptocurrency(crypto) {
     return this.nfts.filter(n => n.cryptocurrency === crypto);
   }
